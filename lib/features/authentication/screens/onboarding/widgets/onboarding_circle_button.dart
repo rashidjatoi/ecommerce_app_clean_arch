@@ -24,7 +24,10 @@ class OnboardingCircleButton extends StatelessWidget {
         style: ElevatedButton.styleFrom(
             shape: const CircleBorder(),
             backgroundColor: dark ? EColors.primaryBackground : EColors.dark),
-        child: const Icon(Iconsax.arrow_right_3),
+        child: Icon(
+          Iconsax.arrow_right_3,
+          color: dark ? EColors.dark : EColors.primaryBackground,
+        ),
       ),
     );
   }
