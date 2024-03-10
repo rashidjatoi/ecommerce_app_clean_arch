@@ -64,13 +64,13 @@ class ResetPasswordScreen extends StatelessWidget {
                 ),
               ),
 
-              // Buttons
+              const SizedBox(height: ESizes.spaceBtwItems),
 
               SizedBox(
                 width: double.infinity,
                 child: TextButton(
                   onPressed: () {},
-                  child: const Text(ETexts.done),
+                  child: const Text(ETexts.resendEmail),
                 ),
               ),
             ],

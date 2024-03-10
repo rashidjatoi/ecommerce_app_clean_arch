@@ -34,10 +34,13 @@ class ForgetPasswordScreen extends StatelessWidget {
 
             // Text Fields
 
-            TextFormField(
-              decoration: InputDecoration(
-                labelText: ETexts.email,
-                prefixIcon: Icon(Iconsax.direct_right),
+            SizedBox(
+              height: 60,
+              child: TextFormField(
+                decoration: const InputDecoration(
+                  labelText: ETexts.email,
+                  prefixIcon: Icon(Iconsax.direct_right),
+                ),
               ),
             ),
 

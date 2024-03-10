@@ -3,6 +3,12 @@ import 'package:flutter/material.dart';
 class EColors {
   EColors._();
 
+  // App basic colors
+
+  static const Color primary = Color(0xff4b68ff);
+  static const Color secondary = Color(0xffffE248);
+  static const Color accent = Color(0xffb0c7ff);
+
 // Text Colors
   static const Color textPrimary = Color(0xFF333333);
   static const Color textSecondary = Color(0xFF6C757D);
