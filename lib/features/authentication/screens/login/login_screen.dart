@@ -1,5 +1,4 @@
 import 'package:ecommerce_app/utils/constants/e_strings.dart';
-import 'package:ecommerce_app/utils/helpers/helper_func.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -15,8 +14,6 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final dark = EHelperFunc.isDarkMode(context);
-
     return Scaffold(
       body: SingleChildScrollView(
         child: Padding(

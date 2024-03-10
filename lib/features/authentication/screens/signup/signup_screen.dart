@@ -2,7 +2,6 @@ import 'package:ecommerce_app/common/widgets/login_sigup/form_divider.dart';
 import 'package:ecommerce_app/common/widgets/login_sigup/social_button.dart';
 import 'package:ecommerce_app/utils/constants/e_strings.dart';
 import 'package:ecommerce_app/utils/constants/sizes.dart';
-import 'package:ecommerce_app/utils/helpers/helper_func.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -13,8 +12,6 @@ class SignUpScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final dark = EHelperFunc.isDarkMode(context);
-
     return Scaffold(
       appBar: AppBar(),
       body: SingleChildScrollView(

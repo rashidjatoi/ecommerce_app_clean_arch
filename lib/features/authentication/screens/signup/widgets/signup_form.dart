@@ -1,10 +1,13 @@
+import 'package:ecommerce_app/features/authentication/screens/signup/verify_email_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
 import '../../../../../utils/constants/colors.dart';
 import '../../../../../utils/constants/e_strings.dart';
 import '../../../../../utils/constants/sizes.dart';
 import '../../../../../utils/helpers/helper_func.dart';
+import 'terms_and_conditions_widget.dart';
 
 class SignUpFormWidget extends StatelessWidget {
   const SignUpFormWidget({super.key});
@@ -115,49 +118,7 @@ class SignUpFormWidget extends StatelessWidget {
           const SizedBox(height: ESizes.spaceBtwSections),
 
           // TERMS AND CONDITIONS CHECKBOX
-          Row(
-            children: [
-              SizedBox(
-                width: 24,
-                height: 24,
-                child: Checkbox(
-                  value: true,
-                  onChanged: (value) {},
-                ),
-              ),
-
-              // SPACE
-              const SizedBox(height: ESizes.spaceBtwItems),
-
-              Text.rich(
-                TextSpan(
-                  children: [
-                    TextSpan(
-                        text: ' ${ETexts.iAgreeTo} ',
-                        style: Theme.of(context).textTheme.bodySmall),
-                    TextSpan(
-                      text: ETexts.privacyPolicy,
-                      style: Theme.of(context).textTheme.bodyMedium!.apply(
-                            decoration: TextDecoration.underline,
-                            color: dark ? EColors.white : EColors.buttonPrimary,
-                          ),
-                    ),
-                    TextSpan(
-                      text: ' ${ETexts.and} ',
-                      style: Theme.of(context).textTheme.bodySmall,
-                    ),
-                    TextSpan(
-                      text: ETexts.termsOfUse,
-                      style: Theme.of(context).textTheme.bodyMedium!.apply(
-                            decoration: TextDecoration.underline,
-                            color: dark ? EColors.white : EColors.buttonPrimary,
-                          ),
-                    ),
-                  ],
-                ),
-              )
-            ],
-          ),
+          const SignUpFormTermsAndConditions(),
 
           // SPACE
           const SizedBox(height: ESizes.spaceBtwSections),
@@ -166,7 +127,9 @@ class SignUpFormWidget extends StatelessWidget {
           SizedBox(
             width: double.infinity,
             child: ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Get.to(() => const VerifyEmailScreen());
+              },
               child: const Text(
                 ETexts.createAccount,
               ),
